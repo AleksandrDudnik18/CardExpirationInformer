@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+#panel{
+    height: 20px;
+    padding: 7px;
+}
+.table {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    width: 660px;
+    background: white;
+    text-align: left;
+    border-collapse: collapse;
+    color: #3E4347;
+}
+.table th:first-child, .table td:first-child {
+    border-left: none;
+}
+.table th {
+    font-weight: normal;
+    border-bottom: 2px solid #6297BB;
+    border-right: 20px solid white;
+    border-left: 20px solid white;
+    padding: 8px 10px;
+    min-width: max-content;
+}
+.table td {
+    border-right: 20px solid white;
+    padding: 5px 10px;
+    min-width: max-content;
+}
+.header-table * {
+    padding-right: 30px;
+}
+
+.header-table {
+    border: 1px solid #959494;
+}
+
+#addcarddiv {
+    height: 20px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+

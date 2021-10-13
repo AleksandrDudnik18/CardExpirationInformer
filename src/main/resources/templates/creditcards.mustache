@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClientCards</title>
+    <meta charset="utf-8" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<div id="panel">
+    <a href="main">&#10094; CLIENTS</a>
+</div>
+
+
+<div style="float: left">
+    <table class="header-table">
+        <tr>
+            <th>id</th>
+            <th>surname</th>
+            <th>name</th>
+            <th>patronymic</th>
+            <th>birthday</th>
+            <th>email</th>
+        </tr>
+        {{#client}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{surname}}</td>
+                <td>{{name}}</td>
+                <td>{{patronymic}}</td>
+                <td>{{birthday}}</td>
+                <td>{{email}}</td>
+            </tr>
+        {{/client}}
+    </table>
+</div>
+<div style="float: left" id = "addcarddiv">
+    <form method="post" action="addCreditCard">
+        {{#client}}<input type="hidden" name="id" value="{{id}}">{{/client}}
+        <input type="submit" name="addCreditCard" value="create credit card">
+    </form>
+</div>
+
+
+<div id="panel" style="clear: both">
+</div>
+<div style="clear: both">
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>number</th>
+            <th>issueDate</th>
+            <th>expirationDate</th>
+            <th>statusCard</th>
+        </tr>
+        {{#creditcards}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{number}}</td>
+                <td>{{issueDate}}</td>
+                <td>{{expirationDate}}</td>
+                <td>{{statusCard}}</td>
+            </tr>
+        {{/creditcards}}
+    </table>
+</div>
+</body>
+</html>

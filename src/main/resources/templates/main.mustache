@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<div id="panel">
+    <label>Input new client:</label>
+</div>
+<div>
+    <form method="post" action="addClient">
+        <input type="text" name="surname" placeholder="surname">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="patronymic" placeholder="patronymic">
+        <input type="date" name="birthday" placeholder="birthday">
+        <input type="text" name="email" placeholder="email">
+        <input type="submit" name="addClient" value="save">
+    </form>
+</div>
+<div id="panel">
+</div>
+<div>
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>surname</th>
+            <th>name</th>
+            <th>patronymic</th>
+            <th style="min-width: 100px">birthday</th>
+            <th>email</th>
+            <th>go to</th>
+        </tr>
+        {{#clients}}
+            <tr>
+                <form method="post" action="tocreditcards">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <td>{{id}}</td>
+                    <td>{{surname}}</td>
+                    <td>{{name}}</td>
+                    <td>{{patronymic}}</td>
+                    <td>{{birthday}}</td>
+                    <td>{{email}}</td>
+                    <td><input value="credit cards" name="openlistcreditcards" type="submit"></td>
+                </form>
+            </tr>
+        {{/clients}}
+    </table>
+</div>
+</body>
+</html>
