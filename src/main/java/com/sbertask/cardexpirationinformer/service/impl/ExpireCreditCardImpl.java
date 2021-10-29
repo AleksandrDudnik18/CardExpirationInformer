@@ -4,7 +4,9 @@ import com.sbertask.cardexpirationinformer.models.CreditCard;
 import com.sbertask.cardexpirationinformer.service.CreditCardService;
 import com.sbertask.cardexpirationinformer.service.ExpireCreditCardService;
 import com.sbertask.cardexpirationinformer.service.MailingService;
+import com.sbertask.cardexpirationinformer.service.qualifiers.CreditCardQualifier;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -18,6 +20,7 @@ import java.util.concurrent.Future;
 public class ExpireCreditCardImpl implements ExpireCreditCardService {
 
     @Autowired
+    @CreditCardQualifier
     private CreditCardService creditCardService;
 
     @Autowired

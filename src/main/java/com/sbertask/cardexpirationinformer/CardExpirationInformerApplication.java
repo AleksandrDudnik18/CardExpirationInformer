@@ -3,7 +3,10 @@ package com.sbertask.cardexpirationinformer;
 import com.sbertask.cardexpirationinformer.service.ClientService;
 import com.sbertask.cardexpirationinformer.service.CreditCardService;
 import com.sbertask.cardexpirationinformer.service.ExpireCreditCardService;
+import com.sbertask.cardexpirationinformer.service.qualifiers.ClientQualifier;
+import com.sbertask.cardexpirationinformer.service.qualifiers.CreditCardQualifier;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,8 +30,10 @@ public class CardExpirationInformerApplication implements CommandLineRunner {
     }
 
     @Autowired
+    @ClientQualifier
     private ClientService clientService;
     @Autowired
+    @CreditCardQualifier
     private CreditCardService creditCardService;
 
 

@@ -9,10 +9,11 @@ public interface ClientService {
 
     Client createClient(String surname, String name, String patronymic, LocalDate birthday, String email);
 
-    void save(Client client);
+    Client save(Client client);
 
     List<Client> findAll();
 
     Client findClientById(Long id);
+
 
 }

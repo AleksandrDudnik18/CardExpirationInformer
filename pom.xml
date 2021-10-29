@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sbertask</groupId>
-    <artifactId>CardExpirationInformer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>cardexpirationinformer</artifactId>
+    <version>v1</version>
     <name>CardExpirationInformer</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -87,6 +87,9 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                    <image>
+                        <name>docker.io/${project.artifactId}:v1</name>
+                    </image>
                 </configuration>
             </plugin>
         </plugins>

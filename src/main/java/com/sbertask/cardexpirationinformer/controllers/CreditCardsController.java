@@ -4,7 +4,10 @@ package com.sbertask.cardexpirationinformer.controllers;
 import com.sbertask.cardexpirationinformer.models.CreditCard;
 import com.sbertask.cardexpirationinformer.service.ClientService;
 import com.sbertask.cardexpirationinformer.service.CreditCardService;
+import com.sbertask.cardexpirationinformer.service.qualifiers.ClientQualifier;
+import com.sbertask.cardexpirationinformer.service.qualifiers.CreditCardQualifier;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,9 +20,13 @@ import java.time.LocalDate;
 
 @Controller
 public class CreditCardsController {
+
     @Autowired
+    @ClientQualifier
     private ClientService clientService;
+
     @Autowired
+    @CreditCardQualifier
     private CreditCardService creditCardService;
 
     @GetMapping("creditcards")
@@ -32,7 +39,9 @@ public class CreditCardsController {
 
     @PostMapping("addCreditCard")
     public ModelAndView addCreditCard(@RequestParam String id, ModelMap model) {
+
         Long clientId = Long.parseLong(id);
+
         CreditCard card = creditCardService.createCreditCard(
                 clientService.findClientById(clientId), LocalDate.now().plusYears(4L));
         creditCardService.save(card);

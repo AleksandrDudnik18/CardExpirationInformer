@@ -21,17 +21,6 @@ public class CreditCardServiceDb implements CreditCardService {
     private CreditCardRepository creditCardRepository;
 
     @Override
-    public String generateNumberCreditCard() {
-        Random random = new Random();
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < 16; i++) {
-            stringBuilder.append(random.nextInt(10));
-        }
-
-        return stringBuilder.toString();
-    }
-
-    @Override
     public CreditCard createCreditCard(Client client, LocalDate expirationDate) {
         String numberCreditCard;
 

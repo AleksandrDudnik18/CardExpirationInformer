@@ -3,6 +3,7 @@ package com.sbertask.cardexpirationinformer.controllers;
 
 import com.sbertask.cardexpirationinformer.models.Client;
 import com.sbertask.cardexpirationinformer.service.ClientService;
+import com.sbertask.cardexpirationinformer.service.qualifiers.ClientQualifier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,6 +18,7 @@ import java.util.List;
 @Controller
 public class MainController {
     @Autowired
+    @ClientQualifier
     private ClientService clientService;
 
     @GetMapping("main")
