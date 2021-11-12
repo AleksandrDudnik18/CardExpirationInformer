@@ -40,7 +40,7 @@ public class ExpireCreditCardImpl implements ExpireCreditCardService {
     }
 
     @Override
-    @Scheduled(cron = "*/30 * * * * *")
+    @Scheduled(cron = "*/30 * * * * *", zone = "Europe/Moscow")
 //    @Scheduled(cron = "0 0 0 * * *", zone = "Europe/Moscow")
     @Async
     public void start() {
