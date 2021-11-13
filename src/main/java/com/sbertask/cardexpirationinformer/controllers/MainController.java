@@ -21,6 +21,11 @@ public class MainController {
     @ClientQualifier
     private ClientService clientService;
 
+    @GetMapping("/")
+    public String base() {
+        return "redirect:main";
+    }
+
     @GetMapping("main")
     public String main(ModelMap model) {
         List<Client> clients = clientService.findAll();

@@ -4,7 +4,6 @@ import com.sbertask.cardexpirationinformer.models.Client;
 import com.sbertask.cardexpirationinformer.models.CreditCard;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;

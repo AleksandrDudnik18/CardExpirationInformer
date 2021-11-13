@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @EqualsAndHashCode
 //jpa
 @Entity
-@Table(name="clients")
+@Table(name = "clients")
 public class Client {
 
     @Id
@@ -32,21 +32,4 @@ public class Client {
     @Column(nullable = false)
     private String email;
 
-//    @OneToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
-//    private List<CreditCard> creditCards;
-
-
-
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Client client = (Client) o;
-//        return Objects.equals(id, client.id) && Objects.equals(surname, client.surname) && Objects.equals(name, client.name) && Objects.equals(patronymic, client.patronymic) && Objects.equals(birthday, client.birthday);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(id, surname, name, patronymic, birthday);
-//    }
 }

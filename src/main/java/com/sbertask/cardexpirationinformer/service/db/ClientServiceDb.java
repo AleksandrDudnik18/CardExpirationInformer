@@ -2,14 +2,11 @@ package com.sbertask.cardexpirationinformer.service.db;
 
 import com.sbertask.cardexpirationinformer.models.Client;
 import com.sbertask.cardexpirationinformer.repositories.ClientRepository;
-import com.sbertask.cardexpirationinformer.repositories.CreditCardRepository;
 import com.sbertask.cardexpirationinformer.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Service

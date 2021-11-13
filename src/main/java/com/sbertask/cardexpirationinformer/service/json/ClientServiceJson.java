@@ -3,7 +3,6 @@ package com.sbertask.cardexpirationinformer.service.json;
 import com.google.gson.reflect.TypeToken;
 import com.sbertask.cardexpirationinformer.models.Client;
 import com.sbertask.cardexpirationinformer.service.ClientService;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Type;

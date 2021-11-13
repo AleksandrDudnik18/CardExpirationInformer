@@ -6,7 +6,6 @@ import com.sbertask.cardexpirationinformer.service.ExpireCreditCardService;
 import com.sbertask.cardexpirationinformer.service.MailingService;
 import com.sbertask.cardexpirationinformer.service.qualifiers.CreditCardQualifier;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -40,7 +39,7 @@ public class ExpireCreditCardImpl implements ExpireCreditCardService {
     }
 
     @Override
-    @Scheduled(cron = "*/30 * * * * *", zone = "Europe/Moscow")
+    @Scheduled(cron = "*/1 * * * * *", zone = "Europe/Moscow")
 //    @Scheduled(cron = "0 0 0 * * *", zone = "Europe/Moscow")
     @Async
     public void start() {

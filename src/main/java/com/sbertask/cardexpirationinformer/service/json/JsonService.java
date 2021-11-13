@@ -1,8 +1,6 @@
 package com.sbertask.cardexpirationinformer.service.json;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.sbertask.cardexpirationinformer.models.Client;
 import org.apache.commons.io.FileUtils;
 
 import javax.persistence.Table;
@@ -12,7 +10,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public abstract class JsonService<T, I> {
